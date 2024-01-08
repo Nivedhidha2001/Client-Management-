@@ -1,0 +1,31 @@
+<h3 style="color:green;">Meetings Schedule </h3><table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th style="color:orangered">Id</th>
+            <th style="color:orangered">Password</th>
+            <th style="color:orangered">Name</th>
+            <th style="color:orangered">Email</th>
+            <th style="color:orangered">Meeting Date</th>
+            <th style="color:orangered">Month</th>
+            <th style="color:orangered">Time in 24hrs</th>
+            
+            <th style="color:green">Operations</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+            <td>{{p.id}}</td>
+            <td>{{p.password}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.email}}</td>
+            <td>{{p.date}}</td>
+            <td>{{p.month}}</td>
+            <td>{{p.time}}</td>
+            <td>
+                <a routerLink="details/{{p.id}}" class="btn btn-success">view</a>
+                <a routerLink="editproduct/{{p.id}}" class="btn btn-primary ms-2">edit</a>
+                <button (click)="delete(p.id)" class="btn btn-danger ms-2">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,43 @@
+<h3 style="color:green;">Fill the form to Schedule a meeting</h3><table class="table table-bordered table-striped"></table>
+
+<form class="col-md-6" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label style="color:red">Client ID</label>
+        <input type="number" class="form-control" placeholder="Enter Id"
+        [(ngModel)]="product.id" name="id"/>
+    </div>
+    <div class="form-group">
+        <label style="color:red">Password</label>
+        <input type="text" class="form-control" placeholder="Enter password"
+        [(ngModel)]="product.password" name="password"/>
+    </div>
+   
+    <div class="form-group">
+        <label style="color:red">Client Name</label>
+        <input type="text" class="form-control" placeholder="Enter Client name"
+        [(ngModel)]="product.name" name="name"/>
+    </div>
+   
+    <div class="form-group">
+        <label style="color:red">Email</label>
+        <input type="text" class="form-control" placeholder="Enter email"
+        [(ngModel)]="product.email" name="email"/>
+    </div>
+    <div class="form-group">
+        <label style="color:red">Date</label>
+        <input type="number" class="form-control" placeholder="Enter Date of this month"
+        [(ngModel)]="product.date" name="date"/>
+    </div>
+    <div class="form-group">
+        <label style="color:red">Month</label>
+        <input type="number" class="form-control" placeholder="Enter Date of this month"
+        [(ngModel)]="product.month" name="month"/>
+    </div>
+    <div class="form-group">
+        <label style="color:red">Time</label>
+        <input type="number" class="form-control" placeholder="Enter time in hours"
+        [(ngModel)]="product.time" name="time"/>
+    </div>
+    
+    <button type="submit">Add Product</button>
+</form>
